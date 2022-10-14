@@ -1,0 +1,83 @@
+
+<div class="main_container">
+   <div class="card_body">
+
+      <img src='../assets/mes-logo-Blacktrans.png' alt="">
+      <h4>Reset Password</h4>
+      <button class="for_assistance">For Assistance</button>
+
+      <form [formGroup]="resetForm" class="form-container">
+        <br/>
+        <label class="label_input" for="">Enter Password <span>*</span></label> <br/>
+         <input #firstInputBox type="text" class="padding-box" formControlName="firstPassword" (focus)="openCheckBoxModal1($event)"><br/><br/>
+         <label class="label_input" for="">Confirm Password <span>*</span></label><br/>
+         <input #secondInputBox type="text" class="padding-box" formControlName="secondPassword" (focus)="openCheckBoxModal2($event)"><br/><br/>
+         <label class="label_input" for="">Security Question <span>*</span></label><br/>
+        <select formControlName="question">
+           <option value="" disabled selected>Please select a question</option>
+           <option value="What is your father's middle name?">What is your father's middle name?</option>
+           <option value="Who was your childhood hero?">Who was your childhood hero?</option>
+           <option value="What is your favorite pasttime?">What is your favorite pasttime?</option>
+           <option value="What is your all-time favorite sports team?">What is your all-time favorite sports team?</option>
+           <option value="What was your high school mascot?">What was your high school mascot?</option>
+           <option value="What make was your first car or bike?">What make was your first car or bike?</option>
+           <option value="Where did you first meet your spouse?">Where did you first meet your spouse?</option>
+           <option value="What is your pet's name?">What is your pet's name?</option>
+           <option value="What was the name of your first school?">What was the name of your first school?</option>
+        </select><br/><br/>
+        <label class="label_input" for="">Answer<span>*</span></label><br/>
+         <input type="text" class="padding-box" formControlName="answer"><br/><br/><br/>
+         <input id="submit_button" type="button" value="submit" (click)="formValue()">
+
+         <div *ngIf="showValidaton1" class="validation-container">
+            <p class="checkbox-label">Please Enter the following Critera</p>
+            <input type="checkbox" value="{{f.firstPassword.errors?.maxlength}}" [checked]="f.firstPassword.errors?.maxlength" onclick='return false'>
+            <label for="vehicle1" class="checkbox-label"> Please length must be at least 10 character</label><br>
+
+            <input type="checkbox"  value="{{f.firstPassword.errors?.upperCase}}" [checked]="f.firstPassword.errors?.upperCase" onclick='return false'>
+            <label for="vehicle1" class="checkbox-label"> At least 1 upper case letter</label><br>
+
+            <input type="checkbox" value="{{f.firstPassword.errors?.lowerCase}}" [checked]="f.firstPassword.errors?.lowerCase" onclick='return false'>
+            <label for="vehicle1" class="checkbox-label"> At least 1 Lower case letter</label><br>
+
+            <input type="checkbox" value="{{f.firstPassword.errors?.oneNumber}}" [checked]="f.firstPassword.errors?.oneNumber" onclick='return false'>
+            <label for="vehicle1" class="checkbox-label"> At least 1 number</label><br>
+      
+            <input type="checkbox" value="{{f.firstPassword.errors?.invalidName}}" [checked]="f.firstPassword.errors?.invalidName" onclick='return false'>
+            <label for="vehicle1" class="checkbox-label"> At least 1 special character (!@#$%&)</label><br>
+
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled="disabled">
+            <label for="vehicle1" class="checkbox-label"> Cannot be the same as any of your last 12 password</label><br>
+         </div>
+
+         <div *ngIf="showValidaton2" class="validation-container">
+            <p class="checkbox-label">Please Enter the following Critera</p>
+            <input type="checkbox" value="{{f.secondPassword.errors?.maxlength}}" [checked]="f.secondPassword.errors?.maxlength" onclick='return false'>
+            <label for="vehicle1" class="checkbox-label"> Please length must be at least 10 character</label><br>
+
+            <input type="checkbox"  value="{{f.secondPassword.errors?.upperCase}}" [checked]="f.secondPassword.errors?.upperCase" onclick='return false'>
+            <label for="vehicle1" class="checkbox-label"> At least 1 upper case letter</label><br>
+
+            <input type="checkbox" value="{{f.secondPassword.errors?.lowerCase}}" [checked]="f.secondPassword.errors?.lowerCase" onclick='return false'>
+            <label for="vehicle1" class="checkbox-label"> At least 1 Lower case letter</label><br>
+
+            <input type="checkbox" value="{{f.secondPassword.errors?.oneNumber}}" [checked]="f.secondPassword.errors?.oneNumber" onclick='return false'>
+            <label for="vehicle1" class="checkbox-label"> At least 1 number</label><br>
+      
+            <input type="checkbox" value="{{f.secondPassword.errors?.invalidName}}" [checked]="f.secondPassword.errors?.invalidName" onclick='return false'>
+            <label for="vehicle1" class="checkbox-label"> At least 1 special character (!@#$%&)</label><br>
+
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled="disabled">
+            <label for="vehicle1" class="checkbox-label"> Cannot be the same as any of your last 12 password</label><br>
+         </div>
+
+      </form>
+
+      <p>Don't have an account ? <span> Signup Now</span></p>
+   </div>
+   <div class="bottom-privacy-message">
+      <p class="privacy"> <a href="/">Privacy </a>| <a href="/">Terms of Service</a> | <a href="/">Terms of Use</a></p>
+      <p class="copy">© 2022 Copyright Medical Evaluation Specialists - MES Group</p>
+   </div>
+  
+</div>

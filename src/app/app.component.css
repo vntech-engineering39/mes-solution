@@ -1,0 +1,147 @@
+
+.main_container{
+    border: 1px solid transparent;
+    width: 100%;
+    background-image: url('../../src/assets/MES-Bgfull.jpg');
+    background-repeat: no-repeat;
+    color: white;
+    font-family:"Poppins", sans-serif ;
+}
+.card_body{
+    width: 30%;
+    background: white;
+    color: #bbbdc0;
+    margin: auto;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 1%;
+    position: relative;
+}
+.card_body>h4{
+    font-size: 30px;
+    color: black;
+    font-weight: lighter;
+}
+
+.main_container>p{
+text-align: center;
+}
+.label_input{
+    color: #7f8287;
+    font-size: 14px;
+}
+form>label>span{
+    color: red;
+}
+form{
+    width: 80%;
+    margin: auto;
+}
+form>input{
+    width: 100%;
+    height: 25px;
+    border-radius: 4px;
+    border: 1px solid #bbbdc0;
+    margin-top: 10px;
+}
+form>input:focus{
+    outline: 1px solid #132e65;
+}
+form>select{
+    width: 101%;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #bbbdc0;
+    background: white;
+    margin-top: 10px;
+}
+form>select:focus{
+    outline: 1px solid #132e65;
+}
+.for_assistance{
+    padding: 2% 3%;
+    color: #132e65;
+    background: white;
+    border: 1px solid #132e65;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.for_assistance:hover{
+    background: #132e65;
+    color: white;
+}
+
+#submit_button{
+    background-color: #132e65;
+    color: white;
+    height: 35px;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#submit_button:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card_body>p{
+    font-size: 16px;
+    color: black;
+    margin-top: 30px;
+}
+.card_body>p>span{
+    color:  #73c5f7;
+    cursor: pointer;
+}
+.main_container>p{
+    font-size: 14px;
+    font-weight: lighter;
+}
+.main_container>p>a{
+  color: white;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+/* .form-container{
+    position: relative;
+} */
+.validation-container{
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    transform: translate(358px,217px);
+    padding: .6rem;
+    border-radius: 7px;
+}
+.checkbox-label{
+    color: black;
+    font-size: 14px;
+}
+
+input[type=checkbox] {
+    accent-color: green;
+}
+.padding-box{
+    padding: .9rem;
+}
+.bottom-privacy-message{
+    text-align: center;
+    color: #fff;
+}
+.copy{
+    margin: .5rem;
+}
+.privacy{
+    margin: .3rem;
+}
+.privacy a{
+    color: #fff;
+}
