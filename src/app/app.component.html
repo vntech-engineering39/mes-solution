@@ -46,8 +46,8 @@
             <input type="checkbox" value="{{f.firstPassword.errors?.invalidName}}" [checked]="f.firstPassword.errors?.invalidName" onclick='return false'>
             <label for="vehicle1" class="checkbox-label"> At least 1 special character (!@#$%&)</label><br>
 
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled="disabled">
-            <label for="vehicle1" class="checkbox-label"> Cannot be the same as any of your last 12 password</label><br>
+            <input type="checkbox" value="" [checked]="!f.firstPassword.errors?.pattern && f.firstPassword.errors?.minlength">
+            <label for="vehicle1" class="checkbox-label"> Password can not contain space</label><br>
          </div>
 
          <div *ngIf="showValidaton2" class="validation-container">
@@ -67,8 +67,8 @@
             <input type="checkbox" value="{{f.secondPassword.errors?.invalidName}}" [checked]="f.secondPassword.errors?.invalidName" onclick='return false'>
             <label for="vehicle1" class="checkbox-label"> At least 1 special character (!@#$%&)</label><br>
 
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" disabled="disabled">
-            <label for="vehicle1" class="checkbox-label"> Cannot be the same as any of your last 12 password</label><br>
+            <input type="checkbox" value="Bike" [checked]="!f.secondPassword.errors?.pattern && f.secondPassword.errors?.minlength">
+            <label for="vehicle1" class="checkbox-label"> Password can not contain space</label><br>
          </div>
 
       </form>

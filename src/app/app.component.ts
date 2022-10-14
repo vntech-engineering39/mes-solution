@@ -25,8 +25,8 @@ export class AppComponent implements OnInit {
   showValidaton2 = false;
   ngOnInit(): void {
     this.resetForm = this.fb.group({
-      firstPassword: [null, [Validators.required, Validators.maxLength(9), this.customValidator.specialCharacter, this.customValidator.upperCase, this.customValidator.lowerCase, this.customValidator.oneNumber]],
-      secondPassword: [null, [Validators.required, Validators.maxLength(9), this.customValidator.specialCharacter, this.customValidator.upperCase, this.customValidator.lowerCase, this.customValidator.oneNumber]],
+      firstPassword: [null, [Validators.required, Validators.maxLength(9),Validators.minLength(20), this.customValidator.specialCharacter, this.customValidator.upperCase, this.customValidator.lowerCase, this.customValidator.oneNumber]],
+      secondPassword: [null, [Validators.required, Validators.maxLength(9),Validators.minLength(20), this.customValidator.specialCharacter, this.customValidator.upperCase, this.customValidator.lowerCase, this.customValidator.oneNumber]],
       question: ['', [Validators.required]],
       answer: [null, [Validators.required]],
     })
